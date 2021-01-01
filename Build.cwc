@@ -1,0 +1,29 @@
+-{vFlag}=""
+;-D_PLATFORM_WINDOWS
+>
+-{vIncl}=
+-I Lib/imgui/
+-I Lib/
+>
+;Build ColorTextEditorDemo
+-c ColorTextEditorDemo/ -o obj/{_sPlatform}_{_sOpt}/ColorTextEditorDemo/ 
+-{dFlags}
+-{vIncl}
+>
+;Build ImGuiColorTextEdit
+-c Lib/ImGuiColorTextEdit/ -o obj/{_sPlatform}_{_sOpt}/ImGuiColorTextEdit/ 
+-{dFlags}
+-{vIncl}
+>
+;Build ImGUI
+-c &Lib/imgui/ -o obj/{_sPlatform}_{_sOpt}/imgui/ 
+-{dFlags}
+-{vIncl}
+>
+
+>
+;Link
+-o obj/ -#To out/App.*  -ld3d11 -ld3dcompiler
+>
+-#Run
+>

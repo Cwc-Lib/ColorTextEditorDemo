@@ -1,0 +1,8 @@
+Build/
+imgui.ini
+obj/
+old/
+*.wdat
+_out/
+out/
+*.glsl.h
